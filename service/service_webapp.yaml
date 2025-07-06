@@ -11,3 +11,13 @@ spec:
       port: 8080
       targetPort: 8080
       nodePort: 30000
+        env:
+        - name: DBHOST
+          value: "mysql"
+        - name: DBUSER
+          value: "root"
+        - name: DBPWD
+          value: "password"
+        - name: DBPORT
+          value: "3306"
+
