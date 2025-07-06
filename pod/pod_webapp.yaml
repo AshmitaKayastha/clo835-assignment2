@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp-pod
+  labels:
+    app: employees
+spec:
+  imagePullSecrets:
+    - name: regcred
+  containers:
+    - name: webapp
+      image: 807683106441.dkr.ecr.us-east-1.amazonaws.com/webapp:latest
+      ports:
+        - containerPort: 8080
+      env:
+        - name: DBHOST
+          value: "mysql"
+        - name: DBUSER
+          value: "root"
+        - name: DBPWD
+          value: "password"
+        - name: DBPORT
+          value: "3306"
