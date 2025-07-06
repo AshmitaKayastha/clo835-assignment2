@@ -108,6 +108,7 @@ http://<ec2-publicip>:30000
 ##  Update WebApp Image
 
 1. Edit deployment:
+   
 nano deployment/deployment_webapp.yaml
 
 2. Update image tag:
@@ -119,13 +120,17 @@ kubectl apply -f deployment/deployment_webapp.yaml
 
 
 4. Check pods:
+5. 
 kubectl get pods -l app=employees
 kubectl describe pod <pod-name>
 
 ##  Clean Up Resources
 
 kubectl delete deployments --all
+
 kubectl delete services --all
+
 kubectl delete pods --all
+
 kubectl delete replicasets --all
 
