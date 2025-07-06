@@ -103,7 +103,7 @@ kubectl get svc
 
 curl http://localhost:30000
 # Or access from browser:
-http://34.230.38.110:30000
+http://<ec2-publicip>:30000
 
 ##  Update WebApp Image
 
