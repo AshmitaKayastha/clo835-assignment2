@@ -25,6 +25,6 @@ spec:
             - name: DBUSER
               value: "root"
             - name: DBPWD
-              value: "passwors"
+              value: "password"
             - name: DBPORT
               value: "3306"
